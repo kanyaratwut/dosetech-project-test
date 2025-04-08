@@ -3,6 +3,21 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
+import '@/assets/scss/global-style.scss';
+
+//bootstrap
+import BootstrapVue from 'bootstrap-vue';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap-vue/dist/bootstrap-vue.css';
+
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
+import vSelect from "vue-select";
+import "vue-select/dist/vue-select.css";
+
+Vue.use(BootstrapVue);
+Vue.use(vSelect);
+
 Vue.config.productionTip = false
 
 new Vue({
