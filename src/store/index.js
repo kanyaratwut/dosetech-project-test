@@ -12,7 +12,7 @@ export default new Vuex.Store({
       password: "test1234",
       mobileNo: "",
       day: 1,
-      month: 2,
+      month: 1,
       year: 2,
       gender: 2,
     },
