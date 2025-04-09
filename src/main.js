@@ -15,8 +15,11 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import vSelect from "vue-select";
 import "vue-select/dist/vue-select.css";
 
+import Vuelidate from 'vuelidate'
+
 Vue.use(BootstrapVue);
 Vue.use(vSelect);
+Vue.use(Vuelidate)
 
 Vue.config.productionTip = false
 

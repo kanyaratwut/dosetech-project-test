@@ -31,7 +31,6 @@
 </template>
 
 <script>
-import AboutView from "@/views/AboutView.vue";
 import InfoView from "@/views/home/InfoView.vue";
 import ChangePassword from "@/views/home/ChangePassword.vue";
 import AddressView from "@/views/home/AddressView.vue";
@@ -46,7 +45,6 @@ import ArrowDown from "@/assets/image/svg/ArrowDown.vue";
 export default {
   name: "NavigationBar",
   components: {
-    AboutView,
     InfoView,
     ChangePassword,
     AddressView,

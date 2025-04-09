@@ -145,7 +145,7 @@ export default {
 }
 .text-error {
   color: #ff0000;
-  font-size: 13px;
+  font-size: 14px;
 }
 @media (max-width: 767.98px) {
   /* .div-input {

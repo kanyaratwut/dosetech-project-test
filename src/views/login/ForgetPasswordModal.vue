@@ -110,6 +110,7 @@ export default {
     ...mapActions(["updateFormData"]),
     open() {
       this.isOpenModal = true;
+      this.isSetNewPassword = false;
       this.email = "";
       this.password = "";
       this.confirmPassword = "";

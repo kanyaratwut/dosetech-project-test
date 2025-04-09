@@ -88,12 +88,14 @@ export default {
 
 <style lang="scss" scoped>
 .dropdown-container {
+  font-size: 17px;
   .custom-v-select {
     width: 120px;
 
     ::v-deep(.vs__dropdown-toggle) {
       border: 1px solid #bcbcbc;
       border-radius: 0;
+      height: 37.5px;
 
       .vs__selected {
         padding: 0;
@@ -135,7 +137,7 @@ export default {
 
   .text-error {
     color: #ff0000;
-    font-size: 13px;
+    font-size: 14px;
   }
 }
 </style>

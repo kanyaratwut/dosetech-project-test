@@ -434,6 +434,14 @@ export default {
       this.formData.district = null;
       this.formData.subDistrict = null;
       this.formData.zipCode = "";
+
+      this.isFirstNameErr = false;
+      this.isLastNameErr = false;
+      this.isAddressErr = false;
+      this.isProvinceErr = false;
+      this.isDistrictErr = false;
+      this.isSubDistrictErr = false;
+      this.isZipCodeErr = false;
     },
     onInput(type) {
       if (type == "province") {
@@ -504,7 +512,7 @@ export default {
 .address-modal {
   color: #16274a;
   padding: 10px;
-  font-size: 15px;
+  font-size: 17px;
   .icon-close {
     width: 12px;
     height: 12px;

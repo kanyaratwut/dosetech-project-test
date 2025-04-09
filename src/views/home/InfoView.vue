@@ -118,7 +118,11 @@
     <div class="footer d-flex justify-content-center align-items-center">
       <CustomButton :label="'บันทึก'" @click="save" />
     </div>
-    <WarningModal ref="warningModal" :type="'Success'" :title="'บันทึกสำเร็จ'"/>
+    <WarningModal
+      ref="warningModal"
+      :type="'Success'"
+      :title="'บันทึกสำเร็จ'"
+    />
   </div>
 </template>
 
@@ -138,7 +142,7 @@ export default {
     InputText,
     CustomButton,
     InputDropdown,
-    WarningModal
+    WarningModal,
   },
   data() {
     return {
@@ -200,18 +204,24 @@ export default {
       this.checkField("isYearErr", "year");
 
       if (this.validateEmail(this.formData.email)) {
-        this.updateFormData({
-          firstName: this.formData.firstName,
-          lastName: this.formData.lastName,
-          email: this.formData.email,
-          mobileNo: this.formData.mobileNo,
-          password: this.formData.password,
-          day: this.formData.day,
-          month: this.formData.month,
-          year: this.formData.year,
-          gender: this.formData.gender,
-        });
-        this.$refs.warningModal.open();
+        if (
+          this.formData.firstName &&
+          this.formData.lastName &&
+          this.formData.mobileNo
+        ) {
+          this.updateFormData({
+            firstName: this.formData.firstName,
+            lastName: this.formData.lastName,
+            email: this.formData.email,
+            mobileNo: this.formData.mobileNo,
+            password: this.formData.password,
+            day: this.formData.day,
+            month: this.formData.month,
+            year: this.formData.year,
+            gender: this.formData.gender,
+          });
+          this.$refs.warningModal.open();
+        }
       } else {
         this.formData.isEmailErr = true;
         this.formData.inValidEmail = true;
